@@ -38,11 +38,11 @@ class Texture:
     def get_image(self, flipped: Tuple[bool, bool]) -> Surface:
         """Return current image."""
         image = self.image
-        if all(flipped):
+        if all(flipped) and hasattr(self, "image_flipped_xy"):
             image = self.image_flipped_xy
-        elif flipped[0]:
+        elif flipped[0] and hasattr(self, "image_flipped_x"):
             image = self.image_flipped_x
-        elif flipped[1]:
+        elif flipped[1] and hasattr(self, "image_flipped_y"):
             image = self.image_flipped_y
         return image
 

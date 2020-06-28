@@ -1,0 +1,22 @@
+Create Sound Library.
+
+Create Texture Library.
+
+Create RelativeLayout and GridLayout utility classes.
+
+Create TickCounter utility class.
+    tick            : int
+    max_tick        : int
+    reset_on_finish : bool
+
+Create UserController utility class for smooth input.
+
+Add multiline support to Text class.
+
+Check for multi-language font support.
+
+Create lock and key mechanic.
+
+Add rotation support on texture class.
+
+Add collision detection.

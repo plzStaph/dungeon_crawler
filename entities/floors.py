@@ -21,10 +21,10 @@ class Crack(Textured):
 
 class Border(Textured):
     textures = {
-        "side" : Texture("floors/borders/side.png"),
-        "2sides_parallel" : Texture("floors/borders/2sides_parallel.png"),
-        "2sides_perpendicular" : Texture("floors/borders/2sides_perpendicular.png"),
-        "3sides" : Texture("floors/borders/3sides.png"),
-        "4sides" : Texture("floors/borders/4sides.png"),
-        "corner" : Texture("floors/borders/corner.png")
+        "side" : Texture("floors/borders/side.png", flippable=(True, True)),
+        "2sides_parallel"      : Texture("floors/borders/2sides_parallel.png", flippable=(True, True)),
+        "2sides_perpendicular" : Texture("floors/borders/2sides_perpendicular.png", flippable=(True, True)),
+        "3sides" : Texture("floors/borders/3sides.png", flippable=(True, True)),
+        "4sides" : Texture("floors/borders/4sides.png", flippable=(True, True)),
+        "corner" : Texture("floors/borders/corner.png", flippable=(True, True))
     }

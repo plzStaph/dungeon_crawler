@@ -8,9 +8,10 @@ from utils.colors import DARK
 class Text(Position):
     """Text class."""
 
-    def __init__(self, key: str, size: int):
+    def __init__(self, key: str, size: int, color = DARK):
         self.key = key
         self.size = size
+        self.color = color
         self.__surf = None
         self.__rect = None
 
@@ -18,8 +19,7 @@ class Text(Position):
         """Create surface upon initialization."""
 
         self.__surf, _ = FONT.font.render(
-            getattr(LOCALIZATION, self.key), DARK, size = self.size
-        )
+            getattr(LOCALIZATION, self.key), self.color, size = self.size)
         self.__rect = self.__surf.get_rect()
 
     def on_render(self, surface: Surface) -> None:

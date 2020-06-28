@@ -2,6 +2,7 @@ from pygame import Surface, display
 from pygame.event import Event
 
 from screens.start import StartScreen
+from screens.sandbox import SandboxScreen
 from screens.level import LevelScreen
 
 from utils.localization import LOCALIZATION
@@ -31,8 +32,9 @@ class ScreenManager:
             CONFIG.get_screen_flags()
         )
         self.__screens = {
-            "start": StartScreen().with_manager(self),
-            "level": LevelScreen().with_manager(self)
+            "start"   : StartScreen().with_manager(self),
+            "sandbox" : SandboxScreen().with_manager(self),
+            "level"   : LevelScreen().with_manager(self)
         }
         self.__active = "start"
         self.activeScreen().on_init()

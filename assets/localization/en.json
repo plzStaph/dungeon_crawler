@@ -1,4 +1,7 @@
 {
+    "language": "English",
     "game_title": "Dungeon Crawler",
+    "level_screen_title" : "Level",
+    "sandbox_screen_title" : "Sandbox",
     "lorem_ipsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada placerat quam sit amet imperdiet. Pellentesque mollis fringilla ex non pharetra. Cras vitae malesuada massa. Curabitur eu mi viverra, dapibus metus viverra, volutpat nibh. Duis tristique pharetra pulvinar. Sed viverra rhoncus ante vitae tincidunt. Sed id lacinia risus. Aliquam at lectus et justo eleifend finibus mollis eu nunc. Etiam accumsan velit sagittis massa accumsan ornare. Ut maximus iaculis ipsum quis dignissim. Cras rutrum nunc in lacus vehicula, at facilisis arcu dictum."
 }

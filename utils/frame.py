@@ -9,10 +9,10 @@ class Frame:
     """Frame class."""
 
     def __init__(self, duration: float, relative_path: str,
-        size = (1, 1), offset = (0, 0), flippable = (False, False)
+        offset = (0, 0), flippable = (False, False)
     ):
         self.duration = duration
-        self.texture = Texture(relative_path, size, offset, flippable)
+        self.texture = Texture(relative_path, offset, flippable)
 
     def on_init(self) -> None:
         """Load texture and fps-friendly duration upon initialization."""

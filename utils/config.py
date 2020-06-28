@@ -10,6 +10,10 @@ class Config:
         """Load config into json file."""
         loadFromJson(self, "config.json")
 
+    def get_texture_factor(self) -> int:
+        """Return texture factor."""
+        return int(self.grid_size/16)
+
     def get_screen_size(self) -> Tuple[int, int]:
         """Return screen size as tuple."""
         return (self.screen_width, self.screen_height)

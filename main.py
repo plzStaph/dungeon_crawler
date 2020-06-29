@@ -5,7 +5,7 @@ from utils.config import CONFIG
 from utils.localization import LOCALIZATION
 from utils.font import FONT
 
-from screens import SCREEN_MANAGER
+from managers.screen_manager import SCREEN_MANAGER
 
 class Game:
     "Game class."

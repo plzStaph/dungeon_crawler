@@ -10,12 +10,16 @@ from utils.config import CONFIG
 from utils.colors import LIGHT
 
 class ScreenManager:
-    "Screen Manager class."
+    """Screen Manager class."""
 
     def __init__(self):
         self.__display_surf = None
-        self.__screens = {}
-        self.__active = ""
+        self.__screens = {
+            "start"   : StartScreen().with_manager(self),
+            "sandbox" : SandboxScreen().with_manager(self),
+            "level"   : LevelScreen().with_manager(self)
+        }
+        self.__active = "start"
 
     def activeScreen(self):
         return self.__screens.get(self.__active)
@@ -31,12 +35,7 @@ class ScreenManager:
             CONFIG.get_screen_size(),
             CONFIG.get_screen_flags()
         )
-        self.__screens = {
-            "start"   : StartScreen().with_manager(self),
-            "sandbox" : SandboxScreen().with_manager(self),
-            "level"   : LevelScreen().with_manager(self)
-        }
-        self.__active = "start"
+        
         self.activeScreen().on_init()
 
     def on_event(self, event: Event) -> None:
